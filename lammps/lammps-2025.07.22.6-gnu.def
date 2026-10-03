@@ -3,15 +3,15 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-gnu:9.8-0
 
 %labels
     Maintainer Mat3ra.com
-    Version lammps-2025.07.22.2-gnu-0
+    Version lammps-2025.07.22.6-gnu-0
 
 %help
-    LAMMPS 2025.07.22.2 (GNU Build)
+    LAMMPS 2025.07.22.6 (GNU Build)
     Example command:
     mpirun -np 1 apptainer exec <image>.sif lmp -i in.min
 
 %environment
-    export PATH=/usr/lib64/openmpi/bin:/opt/lammps-2025.07.22.2/bin:$PATH
+    export PATH=/usr/lib64/openmpi/bin:/opt/lammps-2025.07.22.6/bin:$PATH
 
 %post
     # source env variables from base image
@@ -57,7 +57,7 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-gnu:9.8-0
         -D WITH_JPEG=yes \
         -D WITH_PNG=yes \
         -D WITH_FFMPEG=yes \
-        -D CMAKE_INSTALL_PREFIX=/opt/lammps-2025.07.22.2 ./cmake
+        -D CMAKE_INSTALL_PREFIX=/opt/lammps-2025.07.22.6 ./cmake
 
     cmake --build _build -j$(nproc)
     cmake --install _build
