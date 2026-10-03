@@ -14,6 +14,9 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-gnu:9.8-0
     export PATH=/usr/lib64/openmpi/bin:/opt/lammps-2025.07.22.6/bin:$PATH
 
 %post
+    export LAMMPS_VERSION=22Jul2025
+    export LAMMPS_PATCH=update6
+
     # source env variables from base image
     if [ -f /.singularity.d/env/91-environment.sh ]; then
         . /.singularity.d/env/91-environment.sh
@@ -32,10 +35,10 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-gnu:9.8-0
         libjpeg-turbo-devel
 
     # build lammps
-    wget -q https://download.lammps.org/tars/lammps-22Jul2025_update2.tar.gz
-    tar -xf lammps-22Jul2025_update2.tar.gz
-    rm -f lammps-22Jul2025_update2.tar.gz
-    cd lammps-22Jul2025
+    wget -q https://download.lammps.org/tars/lammps-${LAMMPS_VERSION}_${LAMMPS_PATCH}.tar.gz
+    tar -xf lammps-${LAMMPS_VERSION}_${LAMMPS_PATCH}.tar.gz
+    rm -f lammps-${LAMMPS_VERSION}_${LAMMPS_PATCH}.tar.gz
+    cd lammps-${LAMMPS_VERSION}
 
     export CC=mpicc
     export CXX=mpicxx
@@ -64,5 +67,5 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-gnu:9.8-0
 
     # cleanup
     cd ..
-    rm -rf lammps-22Jul2025
+    rm -rf lammps-${LAMMPS_VERSION}
     dnf clean all && rm -rf /var/cache/yum && rm -rf /var/cache/dnf
