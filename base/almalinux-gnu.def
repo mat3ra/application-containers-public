@@ -3,7 +3,7 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-base:9.8-
 
 %labels
     Maintainer Mat3ra.com
-    Version almalinux-apptainer-gnu-9.8-2
+    Version almalinux-apptainer-gnu-9.8-0
 
 %post
     dnf install -y \
