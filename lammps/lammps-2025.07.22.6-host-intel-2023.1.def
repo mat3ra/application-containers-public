@@ -90,7 +90,9 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-base:9.7-
         libjpeg-turbo \
         libjpeg-turbo-devel \
         libpng \
-        libpng-devel
+        libpng-devel \
+        rdma-core \
+        libfabric
 
     # Clean up
     dnf clean all && rm -rf /var/cache/yum && rm -rf /var/cache/dnf
