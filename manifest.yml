@@ -50,8 +50,8 @@ images:
     tag: 2025.07.22.6-gnu-0
   # Intel
   - name: lammps
-    path: lammps/lammps-2025.07.22.2-host-intel-2023.1.def
-    tag: 2025.07.22.2-host-intel-2023.1-0
+    path: lammps/lammps-2025.07.22.6-host-intel-2023.1.def
+    tag: 2025.07.22.6-host-intel-2023.1-0
   # Intel + CUDA
   - name: lammps
     path: lammps/lammps-2025.07.22.2-host-intel-2023.1-cuda-12.8.def

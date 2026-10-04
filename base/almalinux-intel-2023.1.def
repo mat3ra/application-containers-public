@@ -3,7 +3,7 @@ From: ghcr.io/mat3ra/application-containers-public/almalinux-apptainer-base:9.7-
 
 %labels
     Maintainer Mat3ra.com
-    Version almalinux-apptainer-intel-2023.1-0
+    Version almalinux-apptainer-intel-2023.1-1
 
 %help
     Intel OneAPI v2023.1.0 individual components (C/C++, FORTRAN compilers, MPI,
