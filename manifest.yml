@@ -68,3 +68,6 @@ images:
   - name: deepmd
     path: deepmd/deepmd-3.1.2-cpu.def
     tag: 3.1.2-cpu-0
+  - name: deepmd
+    path: deepmd/deepmd-3.1.2-gpu.def
+    tag: 3.1.2-gpu-0
