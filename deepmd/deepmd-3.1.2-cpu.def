@@ -5,11 +5,14 @@ From: ghcr.io/deepmodeling/deepmd-kit:3.1.2_cpu
     Maintainer Mat3ra.com
     Version deepmd-3.1.2-cpu-1
 
+%files
+    deepmd/scripts/deepmd_tools.py /opt/scripts/deepmd_tools.py
+
 %environment
     export OMP_NUM_THREADS=1
     export TF_INTRA_OP_PARALLELISM_THREADS=1
     export TF_INTER_OP_PARALLELISM_THREADS=1
-    export PYTHONPATH=/opt/python-extra:$PYTHONPATH
+    export PYTHONPATH=/opt/python-extra:/opt/scripts:$PYTHONPATH
 
 %post
     pip install --no-cache-dir --target=/opt/python-extra ase dpdata
