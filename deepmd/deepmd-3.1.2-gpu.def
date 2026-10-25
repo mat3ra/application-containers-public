@@ -3,9 +3,13 @@ From: ghcr.io/deepmodeling/deepmd-kit:3.1.2_cuda129
 
 %labels
     Maintainer Mat3ra.com
-    Version deepmd-3.1.2-gpu-0
+    Version deepmd-3.1.2-gpu-1
 
 %environment
     export OMP_NUM_THREADS=1
     export TF_INTRA_OP_PARALLELISM_THREADS=1
     export TF_INTER_OP_PARALLELISM_THREADS=1
+    export PYTHONPATH=/opt/python-extra:$PYTHONPATH
+
+%post
+    pip install --no-cache-dir --target=/opt/python-extra ase dpdata
