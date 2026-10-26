@@ -15,5 +15,4 @@ From: ghcr.io/deepmodeling/deepmd-kit:3.1.2_cuda129
     export PYTHONPATH=/opt/python-extra:/opt/scripts:$PYTHONPATH
 
 %post
-    base_numpy_version=$(python3 -c "import numpy; print(numpy.__version__)")
-    pip install --no-cache-dir --target=/opt/python-extra "numpy==${base_numpy_version}" ase dpdata
+    pip install --no-cache-dir --target=/opt/python-extra ase dpdata
