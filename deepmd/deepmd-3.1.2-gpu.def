@@ -12,4 +12,4 @@ From: ghcr.io/deepmodeling/deepmd-kit:3.1.2_cuda129
     export PYTHONPATH=/opt/python-extra:$PYTHONPATH
 
 %post
-    pip install --no-cache-dir --target=/opt/python-extra ase dpdata
+    pip install --no-cache-dir --target=/opt/python-extra ase dpdata pymatgen
